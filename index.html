@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Book Collection App</title>
+    <link href='http://fonts.googleapis.com/css?family=Carrois+Gothic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Maven+Pro' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="assets/stylesheets/reset.css">
+    <link rel="stylesheet" href="assets/stylesheets/styles.scss">
+    <link rel="stylesheet" href="assets/stylesheets/mobile.scss">
+  </head>
+
+  <body>
+    <div class="modal" style="display:none;">start growing your collection.<a href="#" class="close">&times;</a>
+      <div>
+        <input class="task-input" type="text"
+        placeholder="author, title, ISBN">
+        <a class="add-task">></a>
+      </div>
+    </div>
+
+
+    <div class="container">
+
+      <header class="site-header">
+        <div class="logo">
+          <a href="index.html"><img src="assets/images/tree.svg" alt="tree"></a>
+        </div> <!--end logo-->
+        <nav class="site-nav">
+          <ol>
+            <!-- <li><a href="#">leaf through my collection</a></li>
+            <li><a href="#"><img src="assets/images/search.svg" alt="search"></a></li> -->
+            <li><a href="#" class="add-button"><img src="assets/images/add.svg" alt="add"></a></li>
+          </ol>
+        </nav>
+      </header>
+
+      <main class="site-main">
+        <div class="collection">
+          <div class="column1">
+            <ol>
+              <li>
+                <a href="pages/book-info.html"><img src="assets/images/brain.jpg" alt="brain on fire"></a>
+              </li>
+              <li>
+                <a href="pages/book-info.html"><img src="assets/images/million.jpg" alt="a million little pieces"></a>
+              </li>
+              <li>
+                <a href="pages/book-info.html"><img src="assets/images/solitude.jpg" alt="solitude"></a>
+              </li>
+            </ol>
+          </div>
+          <div class="column2">
+            <ol>
+              <li>
+                <a href="pages/book-info.html"><img src="assets/images/blueberries.jpg" alt="blueberries for sal"></a>
+              </li>
+              <li>
+                <a href="pages/book-info.html"><img src="assets/images/moby.jpg" alt="moby"></a>
+              </li>
+              <li>
+                <a href="pages/book-info.html"><img src="assets/images/odyssey.jpg" alt="odyssey"></a>
+              </li>
+            </ol>
+          </div>
+          <div class="column3">
+            <ol>
+              <li>
+                <a href="pages/book-info.html"><img src="assets/images/canterbury.jpg" alt="canterbury"></a>
+              </li>
+              <li>
+                <a href="pages/book-info.html"><img src="assets/images/loveyou.png" alt="love you forever"></a>
+              </li>
+              <li>
+                <a href="pages/book-info.html"><img src="assets/images/tale.jpg" alt="tale"></a>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </main>
+    </div><!--end container-->
+
+    <script src="assets/js/jquery.js"></script>
+    <script>
+      $('.add-button').click(function(){
+        $('.modal').show();
+      });
+
+      $('.add-button').click(function(){
+        $('.overlay').show();
+      });
+
+      $('.close').click(function(){
+        $(this).parent().hide();
+      });
+    </script>
+  </body>
+</html>

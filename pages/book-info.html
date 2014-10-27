@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>book-info</title>
+    <link href='http://fonts.googleapis.com/css?family=Carrois+Gothic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../assets/stylesheets/reset.css">
+    <link rel="stylesheet" href="../assets/stylesheets/styles.scss">
+    <link rel="stylesheet" href="../assets/stylesheets/mobile.scss">
+  </head>
+
+  <body>
+
+    <div class="modal" style="display:none;">start growing your collection.<a href="#" class="close">&times;</a>
+      <div>
+        <input class="task-input" type="text"
+        placeholder="author, title, ISBN">
+        <a class="add-task">></a>
+      </div>
+    </div>
+    
+    <div class="container">
+      <header class="site-header">
+        <div class="logo">
+          <a href="../index.html"><img src="../assets/images/tree.svg" alt="tree"></a>
+        </div> <!--end logo-->
+        <nav class="site-nav">
+          <ol>
+            <!-- <li><a href="#">leaf through my collection</a></li>
+            <li><a href="#"><img src="../assets/images/search.svg" alt="search"></a></li> -->
+            <li><a href="#"><img src="../assets/images/add.svg" alt="add"></a></li>
+          </ol>
+        </nav>
+      </header>
+
+      <main class="site-main">
+        <div class="details">
+            <img src="../assets/images/brain.jpg" alt="brain on fire">
+          <div class="info">
+            <h1>Brain on Fire</h1>
+            <h2>Susannah Cahalan, 2012</h2>
+              <p>One day in 2009, twenty-four-year-old Susannah Cahalan woke up alone in a strange hospital room, strapped to her bed, under guard, and unable to move or speak. A wristband marked her as a “flight risk,” and her medical records—chronicling a month-long hospital stay of which she had no memory at all—showed hallucinations, violence, and dangerous instability. Only weeks earlier, Susannah had been on the threshold of a new, adult life: a healthy, ambitious college grad a few months into her first serious relationship and a promising career as a cub reporter at a major New York newspaper. Who was the stranger who had taken over her body? What was happening to her mind? </p>
+              <p>Far more than simply a riveting read and a crackling medical mystery, Brain on Fire is the powerful account of one woman’s struggle to recapture her identity and to rediscover herself among the fragments left behind. Using all her considerable journalistic skills, and building from hospital records and surveillance video, interviews with family and friends, and excerpts from the deeply moving journal her father kept during her illness, Susannah pieces together the story of her “lost month” to write an unforgettable memoir about memory and identity, faith and love. It is an important, profoundly compelling tale of survival and perseverance that is destined to become a classic.</p>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="assets/js/jquery.js"></script>
+    <script>
+      $('.add-button').click(function(){
+        $('.modal').show();
+      });
+
+      $('.add-button').click(function(){
+        $('.overlay').show();
+      });
+
+      $('.close').click(function(){
+        $(this).parent().hide();
+      });
+    </script>
+
+  </body>
+</html>
